@@ -1,0 +1,712 @@
+@import "../../font/font.css";
+@import "../../library/aos/aos.css";
+
+@mixin flex-manager($direction,$justify,$align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  direction: rtl;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: IRANSans, serif;
+
+  .sec-one {
+    @include flex-manager(column, center, center);
+    background-image: url(../../assets/linesD.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: #036af5;
+
+    .logo {
+      @include flex-manager(row, space-between, center);
+      width: 31%;
+      padding: 40px 60px;
+      box-shadow: 0 26px 10px -10px rgba(0, 0, 0, 0.15);
+      background-image: linear-gradient(to bottom, #eff6ff, #fff 99%);
+      border-radius: 37px;
+      margin: 50px;
+
+      div {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 20px 0;
+      }
+
+      span {
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+
+    .main-box {
+      @include flex-manager(column, flex-start, center);
+      border-radius: 85px;
+      background-image: linear-gradient(to bottom, #fafafc, #f2f2f7);
+      text-align: center;
+      padding: 55px 0;
+      width: 58%;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      strong {
+        font-size: 37px;
+        font-weight: 600;
+        color: #ffaf20;
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        color: #2d2d2d;
+        padding: 0 85px;
+      }
+    }
+
+    a {
+      @include flex-manager(row, center, center);
+      gap: 10px;
+      border-radius: 40px;
+      border: solid 1px #ffaf20;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+      color: #2d2d2d;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration-line: none;
+      width: 17%;
+      padding: 20px 0;
+      margin-top: -40px;
+
+      img {
+        width: 5%;
+      }
+    }
+
+    .arrow {
+      width: 3%;
+      margin: 40px 0;
+    }
+  }
+
+  .sec-two {
+    background-color: #fff;
+    direction: rtl;
+
+    .col-1 {
+      @include flex-manager(row, flex-end, center);
+      margin: 50px 0;
+
+      img {
+        position: absolute;
+        right: 7rem;
+        z-index: 1;
+        width: 30%;
+        border-radius: 62px;
+        box-shadow: 0 21px 30px -11px rgba(3, 106, 245, 0.37);
+        background-color: #fff;
+      }
+
+      .gry-box {
+        position: relative;
+        @include flex-manager(column, center, center);
+        border-radius: 0 62px 62px 0;
+        background-color: #d6e7fd;
+        padding: 50px 0;
+
+        .line-pos {
+          @include flex-manager(row, flex-start, center);
+            width: 55%;
+          div {
+            @include flex-manager(row, flex-start, center);
+            width: 100px;
+            height: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+          }
+        }
+
+        strong {
+          @include flex-manager(row, flex-start, center);
+          font-size: 32px;
+          font-weight: 500;
+          width: 55%;
+          margin-bottom: 20px;
+        }
+
+        .do-training {
+          @include flex-manager(row, flex-start, center);
+          margin-bottom: 15px;
+          width: 55%;
+          font-size: 25px;
+          text-align: right;
+        }
+
+        .ops-1 {
+          width: 55%;
+          font-size: 20px;
+          font-weight: 500;
+          text-align: right;
+        }
+      }
+    }
+
+    .col-2 {
+      @include flex-manager(column, center, center);
+      width: 100%;
+
+      strong {
+        font-size: 30px;
+        text-align: right;
+        width: 37%;
+        margin-bottom: 20px;
+      }
+
+      span {
+        @include flex-manager(row, flex-end, center);
+        font-size: 25px;
+        font-weight: 300;
+        text-align: right;
+        width: 37%;
+      }
+    }
+
+  }
+
+  .sec-three {
+    position: relative;
+    width: 100%;
+    @include flex-manager(column, flex-start, center,);
+    background-color: #fff;
+    height: 600px;
+
+    .teachers-title {
+      font-size: 48px;
+      font-weight: 600;
+      color: #545454;
+      margin-top: 50px;
+    }
+
+    .my-slider {
+      @include flex-manager(row, center, center);
+      position: absolute !important;
+      top: 30%;
+      width: 80%;
+
+      .asatid-span {
+        @include flex-manager(column, center, center,);
+      }
+
+      .asatid-box {
+        height: 300px;
+        margin: 0 2px;
+        border-radius: 21px;
+        background-color: #036af5;
+      }
+
+
+      .slick-list {
+        height: 300px;
+      }
+
+      .slick-arrow {
+        margin-right: 20px;
+        font-size: 25px;
+        color: darkred;
+      }
+
+      .copy-1 {
+        position: relative;
+        right: 7px;
+        top: 4px;
+        width: 95%;
+        height: 291px;
+        background-color: #d0e4ff;
+        border-radius: 21px;
+
+      }
+
+      .asatid-name {
+        font-size: 19px;
+        color: #2d2d2d;
+        font-weight: 300;
+        position: absolute !important;
+        bottom: 5px;
+        direction: rtl;
+        width: 218px !important;
+        height: 73px !important;
+        padding: 12px 11px 0 20px;
+        margin-right: 8px;
+        border-radius: 21px 21px 21px 21px;
+        backdrop-filter: blur(10px);
+        background-color: #fff;
+
+        .asatid-name-2 {
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+
+
+    }
+  }
+
+  .sec-four {
+    @include flex-manager(column, center, center);
+    background-color: #fff;
+
+    a {
+      @include flex-manager(row, center, center);
+      gap: 10px;
+      border-radius: 40px;
+      border: solid 1px #ffaf20;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+      color: #2d2d2d;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration-line: none;
+      width: 17%;
+      padding: 20px 0;
+
+
+      img {
+        width: 5%;
+      }
+    }
+
+    strong {
+      font-size: 35px;
+      margin: 40px 0;
+    }
+
+    .line {
+      width: 100px;
+      height: 10px;
+      margin-bottom: 40px;
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+    }
+
+    .col-3 {
+      @include flex-manager(column, space-between, center);
+      width: 100%;
+
+      .first-col {
+        @include flex-manager(row, center, center);
+        width: 80%;
+        margin-bottom: 50px;
+      }
+
+      .second-col {
+        @include flex-manager(row, center, center);
+        width: 80%;
+        margin-bottom: 50px;
+      }
+
+      .third-col {
+        @include flex-manager(row, center, center);
+        width: 80%;
+        margin-bottom: 50px;
+      }
+
+      .contacts {
+        @include flex-manager(row, space-evenly, center);
+        width: 40%;
+
+        .benefits {
+          width: 70%;
+        }
+      }
+
+      .numbers {
+        color: white;
+        padding: 4px 12px;
+        background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+        border-radius: 90%;
+      }
+    }
+  }
+
+  .sec-five {
+    @include flex-manager(column, center, center);
+    background-color: #d6e7fd;
+    //height: 600px;
+
+    strong {
+      font-size: 24px;
+      margin: 40px 0;
+    }
+
+    .line {
+      width: 100px;
+      height: 10px;
+      margin-bottom: 40px;
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      width: 50%;
+
+      tr {
+        :nth-child(1) {
+          padding: 20px;
+          color: #0658c7;
+          border-left: solid 1px #fff;
+          border-bottom: solid 1px #fff;
+        }
+
+        :nth-child(2) {
+          color: #2d2d2d;
+          text-align: right;
+          padding-right: 20px;
+          border-bottom: solid 1px #fff;
+        }
+      }
+    }
+  }
+
+  .sec-six {
+    @include flex-manager(column, center, center);
+    background-color: #fff;
+
+    strong {
+      font-size: 24px;
+      margin: 40px 0;
+    }
+
+    .line {
+      width: 100px;
+      height: 10px;
+      margin-bottom: 40px;
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+    }
+
+    .col-4 {
+      @include flex-manager(row, space-between, center);
+      width: 70%;
+      margin-bottom: 50px;
+
+      .box-style {
+        @include flex-manager(column, space-evenly, flex-start);
+        border-radius: 28px;
+        border: solid 1px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(to bottom, #fafafc, #f2f2f7);
+        width: 24%;
+        height: 200px;
+
+        img {
+          padding: 0 10px 0 0;
+        }
+
+        span {
+          padding: 10px 10px 30px 15px;
+        }
+      }
+    }
+
+    a {
+      @include flex-manager(row, center, center);
+      gap: 10px;
+      border-radius: 40px;
+      border: solid 1px #ffaf20;
+      background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+      color: #2d2d2d;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration-line: none;
+      width: 17%;
+      padding: 20px 0;
+      margin-bottom: 30px;
+
+
+      img {
+        width: 5%;
+      }
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    .sec-one {
+      .logo {
+        width: 50%;
+        margin-top: 50px;
+      }
+
+      .main-box {
+        width: 95%;
+
+        strong {
+          width: 55%;
+        }
+
+        span {
+          font-size: 27px;
+        }
+      }
+
+      a {
+        width: 30%;
+      }
+    }
+
+    .sec-two {
+      .col-1 {
+        img {
+          right: 50px;
+        }
+
+        .gry-box {
+          width: 80%;
+          .line-pos{
+            width: 85%;
+          }
+        }
+      }
+    }
+
+    .sec-three {
+      .my-slider {
+        .asatid-name {
+          width: 196px !important;
+        }
+      }
+    }
+
+    .sec-four {
+      a {
+        width: 30%;
+      }
+
+      .col-3 {
+        .contacts {
+          .benefits {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .sec-five {
+      table {
+
+        :nth-child(1) {
+          width: 20%;
+          font-size: 20px;
+          padding: 10px 0 !important;
+        }
+
+        :nth-child(2) {
+          width: 100%;
+          font-size: 15px;
+          padding: 10px 10px !important;
+        }
+      }
+    }
+
+    .sec-six {
+      a {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    .sec-one {
+      height: 780px;
+
+      .logo {
+        width: 85%;
+        padding: 20px 10px;
+        border-radius: 20px;
+
+        span {
+          font-size: 15px;
+        }
+      }
+
+      .main-box {
+        width: 95%;
+        border-radius: 40px;
+
+        img {
+          width: 50%;
+        }
+
+        strong {
+          font-size: 25px;
+          padding: 0 16px;
+        }
+
+        span {
+          font-size: 17px;
+          padding: 0 36px;
+        }
+      }
+
+      a {
+        width: 50%;
+
+        img {
+          width: 10%;
+        }
+      }
+
+      .arrow {
+        width: 10%;
+      }
+    }
+
+    .sec-two {
+      .col-1 {
+        @include flex-manager(column, center, center);
+
+        img {
+          width: 70%;
+          position: unset;
+          margin-bottom: -50px;
+        }
+
+        .gry-box {
+          border-radius: 0;
+          text-align: right;
+          width: 100%;
+
+          div {
+            margin-top: 50px;
+          }
+
+          strong {
+            font-size: 27px;
+            width: 85%;
+          }
+
+          .do-training {
+            width: 90%;
+            font-size: 17px;
+            margin-bottom: 10px;
+          }
+
+          .ops-1 {
+            width: 90%;
+          }
+        }
+      }
+
+      .col-2 {
+        text-align: right;
+
+        strong {
+          width: 80%;
+        }
+
+        span {
+          text-align: center;
+          width: 85%;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .sec-three {
+      .my-slider {
+        .asatid-name {
+          width: 175px !important;
+        }
+      }
+    }
+
+    .sec-four {
+      a {
+        width: 50%;
+
+        img {
+          width: 10%;
+        }
+      }
+
+      .col-3 {
+        @include flex-manager(column, center, flex-start);
+
+        .first-col {
+          @include flex-manager(column, center, center);
+          margin-bottom: 10px;
+          .contacts {
+            width: 100%;
+
+            .benefits {
+              width: 73%;
+            }
+          }
+        }
+
+        .second-col {
+          @include flex-manager(column, center, center);
+          margin-bottom: 10px;
+          .contacts {
+            width: 100%;
+
+            .benefits {
+              width: 73%;
+            }
+          }
+        }
+
+        .third-col {
+          @include flex-manager(column, center, center);
+          margin-bottom: 10px;
+          .contacts {
+            width: 100%;
+
+            .benefits {
+              width: 73%;
+            }
+          }
+        }
+      }
+    }
+
+    .sec-five {
+      table {
+        width: 95%;
+      }
+    }
+
+    .sec-six {
+      .col-4 {
+        gap: 15px;
+        @include flex-manager(column, center, center);
+
+        .box-style {
+          width: 90%;
+        }
+      }
+
+      a {
+        width: 60%;
+
+        img {
+          width: 10%;
+        }
+      }
+    }
+  }
+}
